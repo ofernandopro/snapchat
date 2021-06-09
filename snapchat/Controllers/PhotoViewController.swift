@@ -26,17 +26,47 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         // Retrieve image:
         if let selectedImage = image.image {
             if let imageData = selectedImage.jpegData(compressionQuality: 0.5){
-                images.child("\(self.idImage).jpg").putData(imageData, metadata: nil, completion: { (metaData, error) in
+                
+                images.child("\(self.idImage).jpg").putData(imageData, metadata: nil) { (metaData, error) in
                     
                     if error == nil {
-                        print("sucesso")
+                        print("sucesso ao fazer upload do arquivo\n\n")
+                        
+                        let imageName = metaData?.dictionaryRepresentation()["name"] as! String
+                        let starsRef = _storage.child(imageName)
+                        // Fetch the download URL:
+                        starsRef.downloadURL { (url, erro) in
+                            if let erro = erro {
+                                print(erro)
+                            } else {
+                                if let urlString = url {
+                                    self.performSegue(withIdentifier: "selectUserSegue", sender: urlString.absoluteString)
+                                }
+                            }
+                        }
+                        
+                        
                     } else {
                         let alert = Alert(title: "Upload failed", message: "Erro saving file, try again.")
                         self.present(alert.getAlert(), animated: true, completion: nil)
                     }
                     
-                })
+                }
             }
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "selectUserSegue" {
+            
+            let userViewController = segue.destination as! UsersTableViewController
+            
+            userViewController.descriptionSnap = self.descriptionTextField.text!
+            userViewController.urlImage = sender as! String
+            userViewController.idImage = self.idImage
+            
         }
         
     }

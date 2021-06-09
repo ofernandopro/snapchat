@@ -13,7 +13,9 @@ class LogInViewController: UIViewController {
     
     
     @IBOutlet weak var emailTextField: UITextField!
+    
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var logInButtonOutlet: UIButton!
     
     @IBAction func logInButton(_ sender: Any) {
         
@@ -62,6 +64,9 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        logInButtonOutlet.layer.cornerRadius = 25
+        logInButtonOutlet.clipsToBounds = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
