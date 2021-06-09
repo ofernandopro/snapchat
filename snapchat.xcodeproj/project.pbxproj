@@ -24,6 +24,7 @@
 		C43AFAFD266858E300D1F0A0 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43AFAFC266858E300D1F0A0 /* PhotoViewController.swift */; };
 		C4757DBE26699B39006577CB /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4757DBD26699B39006577CB /* Alert.swift */; };
 		C4AF3C3C2670ECFD009B6AB6 /* SnapDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AF3C3B2670ECFD009B6AB6 /* SnapDetailsViewController.swift */; };
+		C4AF3C3E267112C6009B6AB6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4AF3C3D267112C6009B6AB6 /* README.md */; };
 		C4CBD2E3267043AD00F72630 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CBD2E2267043AD00F72630 /* Snap.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		C43AFAFC266858E300D1F0A0 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C4757DBD26699B39006577CB /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C4AF3C3B2670ECFD009B6AB6 /* SnapDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapDetailsViewController.swift; sourceTree = "<group>"; };
+		C4AF3C3D267112C6009B6AB6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4CBD2E2267043AD00F72630 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		C425D2E726657B2A008AE0D8 = {
 			isa = PBXGroup;
 			children = (
+				C4AF3C3D267112C6009B6AB6 /* README.md */,
 				C425D2F226657B2A008AE0D8 /* snapchat */,
 				C425D2F126657B2A008AE0D8 /* Products */,
 				E3CA0E1F4FDCEEA17E8CD462 /* Pods */,
@@ -200,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AF3C3E267112C6009B6AB6 /* README.md in Resources */,
 				C425D30026657B33008AE0D8 /* LaunchScreen.storyboard in Resources */,
 				C425D2FD26657B33008AE0D8 /* Assets.xcassets in Resources */,
 				C425D30E2665B2C9008AE0D8 /* apple-app-site-association in Resources */,

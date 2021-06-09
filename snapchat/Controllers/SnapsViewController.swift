@@ -75,6 +75,12 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var height:CGFloat = CGFloat()
+        height = 70
+        return height
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         let totalSnaps = self.snaps.count

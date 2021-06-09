@@ -65,6 +65,12 @@ class UsersTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return self.users.count
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var height:CGFloat = CGFloat()
+        height = 55
+        return height
+    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
