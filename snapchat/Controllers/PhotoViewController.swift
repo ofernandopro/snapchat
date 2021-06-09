@@ -71,7 +71,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
     }
     
-    
     @IBAction func selectPhoto(_ sender: Any) {
         
         /* ---- Para mudar para a camera, basta substituir o .savedPhotosAlbum na linha abaixo para .camera
@@ -81,6 +80,10 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         imagePicker.sourceType = .savedPhotosAlbum
         present(imagePicker, animated: true, completion: nil)
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
